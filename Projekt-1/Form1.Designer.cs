@@ -38,7 +38,8 @@
             this.pizzeTableAdapter = new Projekt_1.dbPizzaDataSetTableAdapters.PizzeTableAdapter();
             this.NazwaPizzy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.iloscDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.składnikiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pizzeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,11 +66,10 @@
             this.dataGridView.AutoGenerateColumns = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.iloscDataGridViewTextBoxColumn,
-            this.składnikiDataGridViewTextBoxColumn,
             this.NazwaPizzy,
-            this.CenaJednostkowa});
+            this.CenaJednostkowa,
+            this.iloscDataGridViewTextBoxColumn,
+            this.składnikiDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.pizzeBindingSource;
             this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
@@ -122,12 +122,25 @@
             this.CenaJednostkowa.HeaderText = "CenaJednostkowa";
             this.CenaJednostkowa.Name = "CenaJednostkowa";
             // 
-            // idDataGridViewTextBoxColumn
+            // btnSearch
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnSearch.Location = new System.Drawing.Point(470, 415);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "&Szukaj";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(12, 415);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Wyjście";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // iloscDataGridViewTextBoxColumn
             // 
@@ -154,6 +167,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.dataGridView);
@@ -184,11 +199,12 @@
         private dbPizzaDataSet dbPizzaDataSet;
         private System.Windows.Forms.BindingSource pizzeBindingSource1;
         private dbPizzaDataSetTableAdapters.PizzeTableAdapter pizzeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazwaPizzy;
         private System.Windows.Forms.DataGridViewTextBoxColumn CenaJednostkowa;
         private System.Windows.Forms.DataGridViewTextBoxColumn iloscDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn składnikiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

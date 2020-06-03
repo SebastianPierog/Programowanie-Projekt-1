@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.pizzeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbPizzaDataSet = new Projekt_1.dbPizzaDataSet();
             this.txtNazwaPizzy = new System.Windows.Forms.TextBox();
@@ -57,23 +55,6 @@
             this.btnSave.Text = "&Zapisz";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID";
-            // 
-            // txtId
-            // 
-            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pizzeBindingSource, "Id", true));
-            this.txtId.Location = new System.Drawing.Point(137, 26);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(210, 20);
-            this.txtId.TabIndex = 0;
-            // 
             // pizzeBindingSource
             // 
             this.pizzeBindingSource.DataMember = "Pizze";
@@ -87,7 +68,7 @@
             // txtNazwaPizzy
             // 
             this.txtNazwaPizzy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pizzeBindingSource, "NazwaPizzy", true));
-            this.txtNazwaPizzy.Location = new System.Drawing.Point(137, 65);
+            this.txtNazwaPizzy.Location = new System.Drawing.Point(137, 38);
             this.txtNazwaPizzy.Name = "txtNazwaPizzy";
             this.txtNazwaPizzy.Size = new System.Drawing.Size(210, 20);
             this.txtNazwaPizzy.TabIndex = 1;
@@ -95,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 65);
+            this.label2.Location = new System.Drawing.Point(28, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
@@ -104,7 +85,7 @@
             // txtIlosc
             // 
             this.txtIlosc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pizzeBindingSource, "Ilosc", true));
-            this.txtIlosc.Location = new System.Drawing.Point(137, 104);
+            this.txtIlosc.Location = new System.Drawing.Point(137, 77);
             this.txtIlosc.Name = "txtIlosc";
             this.txtIlosc.Size = new System.Drawing.Size(210, 20);
             this.txtIlosc.TabIndex = 2;
@@ -112,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 104);
+            this.label3.Location = new System.Drawing.Point(28, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 5;
@@ -121,7 +102,7 @@
             // txtCenaJednostkowa
             // 
             this.txtCenaJednostkowa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pizzeBindingSource, "CenaJednostkowa", true));
-            this.txtCenaJednostkowa.Location = new System.Drawing.Point(137, 144);
+            this.txtCenaJednostkowa.Location = new System.Drawing.Point(137, 117);
             this.txtCenaJednostkowa.Name = "txtCenaJednostkowa";
             this.txtCenaJednostkowa.Size = new System.Drawing.Size(210, 20);
             this.txtCenaJednostkowa.TabIndex = 3;
@@ -129,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 144);
+            this.label4.Location = new System.Drawing.Point(28, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 7;
@@ -138,7 +119,7 @@
             // txtSkladniki
             // 
             this.txtSkladniki.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pizzeBindingSource, "Składniki", true));
-            this.txtSkladniki.Location = new System.Drawing.Point(137, 182);
+            this.txtSkladniki.Location = new System.Drawing.Point(137, 155);
             this.txtSkladniki.Name = "txtSkladniki";
             this.txtSkladniki.Size = new System.Drawing.Size(210, 20);
             this.txtSkladniki.TabIndex = 4;
@@ -146,7 +127,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 182);
+            this.label5.Location = new System.Drawing.Point(28, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 9;
@@ -170,8 +151,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNazwaPizzy);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -189,8 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNazwaPizzy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIlosc;

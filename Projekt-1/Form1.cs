@@ -56,5 +56,19 @@ namespace Projekt_1
                 }
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            using(frmSearchPizza frm = new frmSearchPizza(null))
+            { 
+                if (frm.ShowDialog() == DialogResult.OK)
+                    pizzeBindingSource.DataSource = db.Pizze.ToList();
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
